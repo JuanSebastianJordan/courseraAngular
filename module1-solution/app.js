@@ -48,7 +48,19 @@ function LunchCheckController($scope){
     }
     else{
       
-      num= string.split(",").length;
+      var list= string.split(",");
+      console.log(list);
+      num= list.length;
+      for(var i =0;i<list.length;i++)
+      {
+        var act = list[i];
+        
+        if(act===""||act===" ")
+        {
+          num--;
+        }
+        console.log(num);
+      }
     }
     return num;
 
